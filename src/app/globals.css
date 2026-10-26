@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-burgundy: #240A16;
+  --bg-burgundy-deep: #19050e;
+  --card-wine: #3A1024;
+  --primary-rosegold: #DFA6A0;
+  --secondary-softpink: #F3C7C3;
+  --text-warmwhite: #FFF5F5;
+}
+
+body {
+  background-color: #240A16;
+  color: #FFF5F5;
+  font-family: var(--font-jakarta), system-ui, sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #19050e;
+}
+::-webkit-scrollbar-thumb {
+  background: #3A1024;
+  border-radius: 4px;
+  border: 1px solid rgba(223, 166, 160, 0.2);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #DFA6A0;
+}
+
+/* Selection */
+::selection {
+  background: #DFA6A0;
+  color: #240A16;
+}
+
+/* Ambient Layer */
+.ambient-pattern {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image: 
+    radial-gradient(circle at 10% 15%, rgba(223, 166, 160, 0.08) 0%, transparent 45%),
+    radial-gradient(circle at 90% 85%, rgba(58, 16, 36, 0.6) 0%, transparent 50%),
+    linear-gradient(rgba(223, 166, 160, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(223, 166, 160, 0.02) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 48px 48px, 48px 48px;
+}
+
+/* Glowing text */
+.gradient-rosegold {
+  background: linear-gradient(135deg, #DFA6A0 0%, #F3C7C3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
